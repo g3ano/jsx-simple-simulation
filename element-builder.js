@@ -1,7 +1,7 @@
 /**
  * @typedef {object} PageElement
  * @prop {keyof HTMLElementTagNameMap} tagName
- * @prop {keyof HTMLElement} attributes
+ * @prop {HTMLElement} attributes
  * @prop {(PageElement[] | string)=} children
  */
 
@@ -20,7 +20,7 @@ export class ElementBuilder {
 
   /**
    * @param {PageElement} element
-   * @returns {this}
+   * @returns {HTMLElement}
    */
   #createElement({ tagName, attributes, children }) {
     const node = document.createElement(tagName);
@@ -33,7 +33,7 @@ export class ElementBuilder {
 
   /**
    * @param {HTMLElement} node
-   * @param {Attributes=} attributes
+   * @param {HTMLElement=} attributes
    */
   #assignAttributes(node, attributes) {
     if (!attributes) {
