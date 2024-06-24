@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 2rem;
+}
+
+.header .logo,
+.header .menu {
+  text-transform: capitalize;
+}
+
+.body {
+  height: min-content;
+  background-color: #d5d4d4;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.product-item {
+  background-color: #f3f3f3;
+  display: grid;
+  place-items: center;
+  border-radius: 0.4rem;
+}
